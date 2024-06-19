@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.tw.energy.EndpointITTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-19T03:09:05" hostname="Hieus-MacBook-Pro.local" time="0.581">
+  <properties/>
+  <testcase name="givenSmartMeterIdWithoutPricePlan_whenRequestUsageCost_thenReturnNotFound()" classname="uk.tw.energy.EndpointITTest" time="0.581"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2024-06-19T10:09:05.232+07:00  INFO 4329 --- [    Test worker] uk.tw.energy.EndpointITTest              : Starting EndpointITTest using Java 21.0.3 with PID 4329 (started by hieunguyen in /Users/hieunguyen/Documents/_my-project/doingtest/tw-gradle)
+2024-06-19T10:09:05.233+07:00  INFO 4329 --- [    Test worker] uk.tw.energy.EndpointITTest              : No active profile set, falling back to 1 default profile: "default"
+2024-06-19T10:09:05.634+07:00  INFO 4329 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-06-19T10:09:05.641+07:00  INFO 4329 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-19T10:09:05.641+07:00  INFO 4329 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-19T10:09:05.667+07:00  INFO 4329 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-19T10:09:05.667+07:00  INFO 4329 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 426 ms
+2024-06-19T10:09:05.830+07:00  INFO 4329 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 50537 (http) with context path ''
+2024-06-19T10:09:05.835+07:00  INFO 4329 --- [    Test worker] uk.tw.energy.EndpointITTest              : Started EndpointITTest in 0.706 seconds (process running for 1.18)
+2024-06-19T10:09:06.368+07:00  INFO 4329 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-19T10:09:06.368+07:00  INFO 4329 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-19T10:09:06.369+07:00  INFO 4329 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/hieunguyen/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.13/979ce25f7d3096a2e82214ba7dc972a05ce7a171/byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
