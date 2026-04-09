@@ -1,0 +1,104 @@
+{
+  "general": {
+    "name": "TEST-idle-offhours-login",
+    "description": "Detects when employees log in during non-working hours.",
+    "parentPolicy": "idle-employee-time-monitoring",
+    "period": "00:00-23:59",
+    "severity": 80
+  },
+  "assignment": {},
+  "conditions": {
+    "schedule": {
+      "or": [
+        {
+          "and": [
+            {
+              "periodLogin": {
+                "matches": {
+                  "end": 27000,
+                  "start": 0
+                }
+              }
+            },
+            {
+              "screenUnlock": {
+                "equals": false
+              }
+            },
+            {
+              "dayLogin": {
+                "or": [
+                  {
+                    "equals": "Tuesday"
+                  },
+                  {
+                    "equals": "Monday"
+                  },
+                  {
+                    "equals": "Wednesday"
+                  },
+                  {
+                    "equals": "Thursday"
+                  },
+                  {
+                    "equals": "Friday"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "and": [
+            {
+              "periodLogin": {
+                "matches": {
+                  "end": 86340,
+                  "start": 0
+                }
+              }
+            },
+            {
+              "screenUnlock": {
+                "equals": false
+              }
+            },
+            {
+              "dayLogin": {
+                "or": [
+                  {
+                    "equals": "Sunday"
+                  },
+                  {
+                    "equals": "Saturday"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "actions": {
+    "reactions": [
+      {
+        "warn": {
+          "html": true,
+          "message": "You have logged in outside authorized working hours."
+        },
+        "notify": {
+          "emails": [],
+          "userIds": [
+            "bryan qin #c764b676-e210-5aeb-9b18-c502d4e60353",
+            "central.nguyen@code88.asia #3611b53a-e942-50af-a5d9-ecdd74a29a5e",
+            "jeff.nguyenh@code88.asia #6e373634-a345-5172-97ea-f3087cb25885",
+            "optimus.luong@code88.asia #43c63d41-901c-503e-8ed3-50202b296135",
+            "x@macbookair #3bf05f67-3ee9-5108-ae83-8abe3ecde52b"
+          ]
+        },
+        "risk": "None"
+      }
+    ]
+  }
+}
