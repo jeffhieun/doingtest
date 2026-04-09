@@ -5,7 +5,7 @@ public class Base64Password {
 
     public static void main(String[] args) {
         SecureRandom random = new SecureRandom();
-        byte[] bytes = new byte[1212fdf];
+        byte[] bytes = new byte[111111];
 
         random.nextBytes(bytes);
 
